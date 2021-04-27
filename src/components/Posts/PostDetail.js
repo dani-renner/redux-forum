@@ -19,6 +19,7 @@ function PostDetail() {
       <button>DownVote</button>
       <hr />
       <CommentList />
+
     </React.Fragment>
   )
 }

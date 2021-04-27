@@ -1,7 +1,6 @@
 import React from "react";
 import PostList from "../components/Posts/PostList";
 import NewPostForm from "./Posts/NewPostForm";
-import NewCommentForm from "./Comments/NewCommentForm";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 // import ReusableForm from "./ReuseableForm";

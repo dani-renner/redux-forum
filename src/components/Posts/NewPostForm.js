@@ -25,7 +25,7 @@ function NewPostForm(props) {
         <input
           type="textBox"
           name="textInput"
-          placeholder="Leave A Comment..."
+          placeholder="Post Body"
         />
         <input
           type="hidden"

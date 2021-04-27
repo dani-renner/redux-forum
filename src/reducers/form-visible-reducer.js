@@ -6,3 +6,5 @@ export default (state = false, action) => {
       return state;
   }
 };
+
+// ADD NEW STATE KEY-VALUE FOR TOGGLING COMMENT FORM

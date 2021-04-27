@@ -1,8 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PostDetail from "./PostDetail";
+import NewCommentForm from "../Comments/NewCommentForm";
+import { useSelector, useDispatch } from "react-redux";
+
 
 function Post() {
+  const dispatch = useDispatch();
+
+  const show = useSelector(state => state.formVisibleOnPage)
+
+  const toggleNewFormHandler = () => {
+    dispatch({ type: "TOGGLE_FORM" })
+  }
 
 
 
@@ -14,7 +24,9 @@ function Post() {
       <h1>Title</h1>
       <h4>Count</h4>
       <hr />
-      <PostDetail />
+      <button onClick={toggleNewFormHandler}>TOGGLE</button>
+      {show && <PostDetail />}
+      <NewCommentForm />
     </React.Fragment>
   )
 }
