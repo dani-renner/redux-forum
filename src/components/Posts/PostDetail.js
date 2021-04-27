@@ -8,6 +8,8 @@ function PostDetail() {
   return (
     <React.Fragment>
       <hr />
+      <h1><i>POST DETAIL</i></h1>
+      <hr />
       <h1>Title</h1>
       <h2>userName</h2>
       <h2>textInput</h2>

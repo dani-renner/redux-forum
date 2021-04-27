@@ -5,6 +5,8 @@ function Comment(props) {
   return (
     <React.Fragment>
       <hr />
+      <h1><i>COMMENT</i></h1>
+      <hr />
       <h2>userName</h2>
       <h2>textInput</h2>
       <h3>counter</h3>

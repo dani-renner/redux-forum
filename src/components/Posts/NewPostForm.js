@@ -9,6 +9,8 @@ function NewPostForm(props) {
   return (
     <React.Fragment>
       <hr />
+      <h1><i>NEW POST FORM</i></h1>
+      <hr />
       <form >
         <input
           type="text"

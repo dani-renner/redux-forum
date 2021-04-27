@@ -8,3 +8,12 @@ Further Exploration
 1) css styling
 2) toggle textbox detail
 3) have mutliple lists toggle to display in a larger component
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+Tests
+~~~~~~~~~~~~~~~~~~~~~~~~
+STATE NEEDED FOR-
+  Counter
+  CurrentlyVisibleState
+TESTS
+1) 

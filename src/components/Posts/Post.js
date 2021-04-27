@@ -9,6 +9,8 @@ function Post() {
   return (
     <React.Fragment>
       <hr />
+      <h1><i>POST</i></h1>
+      <hr />
       <h1>Title</h1>
       <h4>Count</h4>
       <hr />
