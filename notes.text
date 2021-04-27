@@ -1,0 +1,10 @@
+1) Form with username, textbox, hidden input for counter, hidden input for timestamp
+2) have actions that can increment/decrement counter
+3) display posts in a list
+4) display posts that have the highest counter at the top of the list
+~~~~~~~~~~~~~~~~~~~~~~~~
+Further Exploration
+~~~~~~~~~~~~~~~~~~~~~~~~
+1) css styling
+2) toggle textbox detail
+3) have mutliple lists toggle to display in a larger component
