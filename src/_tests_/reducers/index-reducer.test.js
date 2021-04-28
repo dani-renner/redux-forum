@@ -2,6 +2,7 @@ import rootReducer from "../../reducers/index";
 import { createStore } from "redux";
 import formVisibleReducer from "../../reducers/form-visible-reducer";
 import commentListReducer from "../../reducers/comment-list-reducer";
+import * as c from "./../../actions/ActionTypes";
 
 let store = createStore(rootReducer);
 
@@ -24,7 +25,7 @@ describe("rootReducer", () => {
 
   test("Check that ADD_COMMENT action works for commentListReducer and root reducer", () => {
     const action = {
-      type: 'ADD_COMMENT',
+      type: c.ADD_COMMENT,
       userName: "userName",
       textInput: "textInput",
       id: 1
@@ -35,7 +36,7 @@ describe("rootReducer", () => {
 
   test("Check that TOGGLE_FORM action works for formVisibleReducer and root reducer", () => {
     const action = {
-      type: "TOGGLE_FORM"
+      type: c.TOGGLE_FORM
     }
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));

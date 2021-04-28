@@ -1,3 +1,4 @@
+import * as c from "./../../actions/ActionTypes";
 import commentListReducer from '../../reducers/comment-list-reducer';
 
 describe('commentListReducer', () => {
@@ -34,7 +35,7 @@ describe('commentListReducer', () => {
   test('should successfully add a comment to master comment list', () => {
     const { userName, textInput, id } = commentData;
     action = {
-      type: 'ADD_COMMENT',
+      type: c.ADD_COMMENT,
       userName: userName,
       textInput: textInput,
       id: id
@@ -52,7 +53,7 @@ describe('commentListReducer', () => {
   test('Should increase count by 1', () => {
     const { userName, textInput, id, counter } = counterState;
     action = {
-      type: "INCREMENT",
+      type: c.INCREMENT,
       userName: userName,
       textInput: textInput,
       counter: counter,
@@ -69,7 +70,7 @@ describe('commentListReducer', () => {
   test('Should decrease count by 1', () => {
     const { userName, textInput, id, counter } = counterState
     action = {
-      type: "DECREMENT",
+      type: c.DECREMENT,
       userName: userName,
       textInput: textInput,
       counter: counter,
@@ -85,7 +86,7 @@ describe('commentListReducer', () => {
 
   test('Should successfully delete comment', () => {
     action = {
-      type: "DELETE_COMMENT",
+      type: c.DELETE_COMMENT,
       id: 1
     };
     expect(commentListReducer(currentState, action)).toEqual({

@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import formVisibleReducer from './form-visible-reducer';
 import commentListReducer from './comment-list-reducer';
+import commentsVisible from "./comment-visible-reducer";
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
-  masterCommentList: commentListReducer
+  masterCommentList: commentListReducer,
+  // commentsVisible: commentsVisible,
 });
 
 export default rootReducer;

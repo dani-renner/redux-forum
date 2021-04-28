@@ -8,12 +8,10 @@ import { useSelector, useDispatch } from "react-redux";
 function Post() {
   const dispatch = useDispatch();
 
-  const show = useSelector(state => state.formVisibleOnPage)
-
+  const show = useSelector(state => state.commentVisibility)
   const toggleNewFormHandler = () => {
-    dispatch({ type: "TOGGLE_FORM" })
+    dispatch({ type: "TOGGLE_COMMENT" })
   }
-
 
 
   return (
