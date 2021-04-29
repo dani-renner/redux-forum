@@ -9,7 +9,7 @@ function Comment(props) {
       <hr />
       <h2>userName</h2>
       <h2>textInput</h2>
-      <h3>counter</h3>
+      <h3>1</h3>
       <h3>TimeStamp</h3>
       <button>UpVote</button>
       <button>DownVote</button>

@@ -1,51 +1,32 @@
-import ReusableForm from "../ReuseableForm";
+import ReusablePostForm from "./ReusableForm";
 import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
 function NewPostForm(props) {
 
+  function handleNewPostFormSubmission(event) {
+    event.preventDefault();
+    props.onNewPostCreation(
+      {
+        title: event.target.title.value,
+        userName: event.target.userName.value,
+        textInput: event.target.textInput.value,
+        counter: event.target.counter.value,
+        timeStamp: event.target.timeStamp.value,
+        id: v4()
+
+      });
+    console.log()
+  }
 
   return (
-    <React.Fragment>
-      <hr />
-      <h1><i>NEW POST FORM</i></h1>
-      <hr />
-      <form >
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-        />
-        <input
-          type="text"
-          name="userName"
-          placeholder="User Name"
-        />
-        <input
-          type="textBox"
-          name="textInput"
-          placeholder="Post Body"
-        />
-        <input
-          type="hidden"
-          name="counter"
-          value="0"
-        />
-        <input
-          type="hidden"
-          name="timeStamp"
-          value={new Date()}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <hr />
-    </React.Fragment>
+    <ReusablePostForm postFormSubmissionHandler={handleNewPostFormSubmission} />
   )
 }
 
 NewPostForm.propTypes = {
-
+  onNewPostCreation: PropTypes.func
 };
 
 export default NewPostForm;

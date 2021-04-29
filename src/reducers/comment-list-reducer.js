@@ -1,31 +1,29 @@
+import * as c from "./../actions/ActionTypes";
 
 export default (state = {}, action) => {
-  const { userName, textInput, id, } = action;
+  const { userName, textInput, id, counter } = action;
   switch (action.type) {
-    case 'ADD_COMMENT':
+    case c.ADD_COMMENT:
       return Object.assign({}, state, {
         [id]: {
           userName: userName,
           textInput: textInput,
-          count: 0,
+          counter: counter,
           id: id
         }
       });
-    case "INCREMENT":
-      return {
-        userName: userName,
-        textInput: textInput,
-        counter: state.counter + 1,
-        id: id
-      }
-    case "DECREMENT":
+    // case c.INCREMENT:
+    //   let upvote = { ...state };
+    //   upvote[id].counter++
+    //   return upvote;
+    case c.DECREMENT:
       return {
         userName: userName,
         textInput: textInput,
         counter: state.counter - 1,
         id: id
       }
-    case "DELETE_COMMENT":
+    case c.DELETE_COMMENT:
       let newState = { ...state };
       delete newState[id];
       return newState;

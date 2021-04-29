@@ -18,10 +18,27 @@ export const addComment = (comment) => {
 };
 export const increment = (id) => ({
   type: c.INCREMENT,
-  id
+  id: id
 });
 
 export const decrement = (id) => ({
   type: c.DECREMENT,
   id
 });
+
+export const addPost = (post) => {
+  const { title, userName, textInput, counter, id } = post;
+  return {
+    type: c.ADD_POST,
+    title,
+    userName,
+    textInput,
+    counter,
+    id,
+  }
+};
+
+export const deletePost = (id) => ({
+  type: c.DELETE_POST,
+  id
+})

@@ -33,18 +33,19 @@ describe('commentListReducer', () => {
     expect(commentListReducer({}, { type: null })).toEqual({});
   });
   test('should successfully add a comment to master comment list', () => {
-    const { userName, textInput, id } = commentData;
+    const { userName, textInput, id, counter } = commentData;
     action = {
       type: c.ADD_COMMENT,
       userName: userName,
       textInput: textInput,
+      counter: counter,
       id: id
     };
     expect(commentListReducer({}, action)).toEqual({
       [id]: {
         userName: userName,
         textInput: textInput,
-        count: 0,
+        counter: counter,
         id: id
       }
     });

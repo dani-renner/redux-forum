@@ -5,28 +5,29 @@ import NewCommentForm from "../Comments/NewCommentForm";
 import { useSelector, useDispatch } from "react-redux";
 
 
-function Post() {
-  const dispatch = useDispatch();
-
-  const show = useSelector(state => state.commentVisibility)
-  const toggleNewFormHandler = () => {
-    dispatch({ type: "TOGGLE_COMMENT" })
-  }
-
-
+function Post(props) {
+  // const month = props.timeStamp.toLocaleString("en-US", { month: "short" });
+  // const day = props.timeStamp.toLocaleString("en-US", { day: "2-digit" });
+  // const year = props.timeStamp.getFullYear();
+  // const timeStamp = `${month}/${day}/${year}`;
   return (
     <React.Fragment>
-      <hr />
-      <h1><i>POST</i></h1>
-      <hr />
-      <h1>Title</h1>
-      <h4>Count</h4>
-      <hr />
-      <button onClick={toggleNewFormHandler}>TOGGLE</button>
-      {show && <PostDetail />}
-      <NewCommentForm />
+      <div onClick={() => props.whenPostClicked(props.id)}>
+        <h3>{props.title} - {props.counter} - {props.timeStamp}</h3>
+        <h4>{props.userName}</h4>
+        <p>{props.textInput}</p>
+      </div>
     </React.Fragment>
-  )
+  );
+}
+
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  userName: PropTypes.string.isRequired,
+  textInput: PropTypes.string.isRequired,
+  counter: PropTypes.number,
+  timeStamp: PropTypes.number,
+  id: PropTypes.string,
 }
 
 export default Post;
