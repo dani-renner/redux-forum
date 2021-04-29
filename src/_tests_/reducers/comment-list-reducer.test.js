@@ -51,39 +51,39 @@ describe('commentListReducer', () => {
     });
   });
 
-  test('Should increase count by 1', () => {
-    const { userName, textInput, id, counter } = counterState;
-    action = {
-      type: c.INCREMENT,
-      userName: userName,
-      textInput: textInput,
-      counter: counter,
-      id: id
-    };
-    expect(commentListReducer(counterState, action)).toEqual({
-      userName: userName,
-      textInput: textInput,
-      counter: 1,
-      id: id
-    });
-  });
+  // test('Should increase count by 1', () => {
+  //   const { userName, textInput, id, counter } = counterState;
+  //   action = {
+  //     type: c.INCREMENT,
+  //     userName: userName,
+  //     textInput: textInput,
+  //     counter: counter,
+  //     id: id
+  //   };
+  //   expect(commentListReducer(counterState, action)).toEqual({
+  //     userName: userName,
+  //     textInput: textInput,
+  //     counter: 1,
+  //     id: id
+  //   });
+  // });
 
-  test('Should decrease count by 1', () => {
-    const { userName, textInput, id, counter } = counterState
-    action = {
-      type: c.DECREMENT,
-      userName: userName,
-      textInput: textInput,
-      counter: counter,
-      id: id
-    };
-    expect(commentListReducer(counterState, action)).toEqual({
-      userName: userName,
-      textInput: textInput,
-      counter: -1,
-      id: id
-    });
-  });
+  // test('Should decrease count by 1', () => {
+  //   const { userName, textInput, id, counter } = counterState
+  //   action = {
+  //     type: c.DECREMENT,
+  //     userName: userName,
+  //     textInput: textInput,
+  //     counter: counter,
+  //     id: id
+  //   };
+  //   expect(commentListReducer(counterState, action)).toEqual({
+  //     userName: userName,
+  //     textInput: textInput,
+  //     counter: -1,
+  //     id: id
+  //   });
+  // });
 
   test('Should successfully delete comment', () => {
     action = {

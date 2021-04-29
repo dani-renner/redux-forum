@@ -16,13 +16,13 @@ export default (state = {}, action) => {
     //   let upvote = { ...state };
     //   upvote[id].counter++
     //   return upvote;
-    case c.DECREMENT:
-      return {
-        userName: userName,
-        textInput: textInput,
-        counter: state.counter - 1,
-        id: id
-      }
+    // case c.DECREMENT:
+    //   return {
+    //     userName: userName,
+    //     textInput: textInput,
+    //     counter: state.counter - 1,
+    //     id: id
+    //   }
     case c.DELETE_COMMENT:
       let newState = { ...state };
       delete newState[id];

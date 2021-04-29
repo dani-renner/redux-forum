@@ -18,6 +18,10 @@ export default (state = {}, action) => {
       let upvote = { ...state };
       upvote[id].counter++
       return upvote;
+    case c.DECREMENT:
+      let downvote = { ...state };
+      downvote[id].counter--
+      return downvote;
     case c.DELETE_POST:
       let newState = { ...state };
       delete newState[id];

@@ -41,4 +41,8 @@ export const addPost = (post) => {
 export const deletePost = (id) => ({
   type: c.DELETE_POST,
   id
-})
+});
+
+export const toggleCommentAddForm = () => ({
+  type: c.TOGGLE_COMMENT_FORM
+});

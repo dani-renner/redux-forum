@@ -5,3 +5,4 @@ export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
 export const ADD_POST = "ASS_POST";
 export const DELETE_POST = "DELETE_POST";
+export const TOGGLE_COMMENT_FORM = 'TOGGLE_COMMENT_FORM';

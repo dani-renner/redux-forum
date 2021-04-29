@@ -12,7 +12,8 @@ describe("rootReducer", () => {
     expect(rootReducer({}, { type: null })).toEqual({
       masterCommentList: {},
       masterPostList: {},
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      commentFormVisibleOnPage: false
     });
   });
 
